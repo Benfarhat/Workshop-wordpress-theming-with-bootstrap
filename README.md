@@ -177,6 +177,44 @@ En cliquant sur Run importer vous avez juste a sélectionner le fichier xml tél
 
 Pour notre workshop nous allons tout d'abord faire une version statique de votre thème, celui ci sera constituée uniquement de code HTML, JS et CSS
 
+### Installation de live-server
+
+Nous allons installer live-server pour pouvoir lancer un serveur qui nous permettra de recharger votre navigateur à chaque fois que vous modifier un fichier.
+
+Initialiser votre projet comme suit:
+
+```
+npm init -y
+```
+puis installons live serveur via l'une des commandes suivantes:
+
+```
+yarn add -D live-server
+npm i -D live-server
+```
+
+ensuite modifions les scripts du fichier package.json comme suit:
+
+```
+{
+  "name": "workshop",
+  "version": "0.0.1",
+  "description": "Using bootstrap to create advanced wordpress theme",
+  "main": "script.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "keywords": [],
+  "author": "Benfarhat Elyes <benfarhat.elyes@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
+```
+ 
+A présent il suffit de lancer la commande `yarn dev` ou `npm run dev` pour avoir un serveur qui en principe devrait ouvrir un nouvel onglet au niveau de votre navigateur par défaut.
+
 ### Utilisation de bootstrap
 
 Il y a deux façons d'utiliser bootstrap:
