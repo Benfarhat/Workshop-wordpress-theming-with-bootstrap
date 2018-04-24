@@ -190,3 +190,56 @@ Techniquement est via à vis du visiteur, les deux sont identiques, l'internaute
 2. En utilisant un CDN, cela pourrait être plus rapide pour l'internaute puisque vis à vis du visiteur, les sources CDN sont probablement utilisés par d'autres sites et existe potentiellement sur la machine du visiteur qui n'aura pas à le télécharger mais à utiliser la version qu'il a en cache
 
 > Remarque: Si vous herbergé vou même vos fichiers, vous pouvez en production activer le caching de vos assets (fichiers JS, CSS, Police d'écriture et images) via par exemple [mod_expires](https://httpd.apache.org/docs/current/fr/mod/mod_expires.html) pour les serveurs apache ou [ngx_http_headers_module](http://nginx.org/en/docs/http/ngx_http_headers_module.html) pour les serveurs nginx
+
+Dans notre cas et pour facliter ce workshop nous utiliserons le CDN, mais si vous voulez utiliser bootstrap en local alors rappelez vous que ce dernier aura besoin de 4 sous repertoires:
+- css : pour les fichiers de styles
+- js : pour les scripts
+- img : pour les images
+- fonts : pour les polices d'écritures
+
+En temps voulu nous les rajouterons lorsque nous créerons nos styles et nos scripts personalisés ou encore nos images
+
+### Démarrage
+
+Utilisons le code de démarrage de Bootstrap auxquels nous rajouterons le lien CDN de [font awesome](https://fontawesome.com/) qui nous permettra d'avoir des icones (bien que bootstrap en intègre)
+
+il existe également ces icones ci:
+
+- [iconic](https://useiconic.com/open/)
+- [Octicons](https://octicons.github.com/)
+- [Nerdfonts](http://nerdfonts.com/)
+- [Material icons](https://material.io/icons/)
+- [Material design icons](https://materialdesignicons.com/)
+
+Nous obtenons ainsi le code suivant
+
+```
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
+En terme de fonctionalité il est très simple, essayons de réfléchir sur le contenu
+
