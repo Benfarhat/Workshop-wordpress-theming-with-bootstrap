@@ -16,6 +16,32 @@ Wordpress est également un CMS multisite, c'est sa force et cette fonctionalit�
 - Mettre à disposition un plugin
 - Permettre l'interaction entre les sites simplement
 
+A la base Wordpress était vue comme un simple outils de Blog, mais aujourd'hui il permet beaucoup, aussi bien de faire un blog, qu'un site de tutoriel, qu'un site institutionnel, une SPA et bien plus encore puisqu'il permet très facilement de gérer des APIs REST.
+
+Dans la communauté Open Data par exemple, wordpress est utilisé en frontal avec l'outil CKAN qui permet de gérer des données ouvertes
+
+Wordpress est le CMS le plus utilisé dans le monde, voici des exemples de sites utilisant wordpress:
+
+- [https://www.whitehouse.gov/](https://www.whitehouse.gov/)
+- [http://www.bbcamerica.com/](http://www.bbcamerica.com/)
+- [https://www.vogue.fr/?international](https://www.vogue.fr/?international)
+- [http://www.angrybirds.com/](http://www.angrybirds.com/)
+- [http://www.sonymusic.com/](http://www.sonymusic.com/)
+- [http://usainbolt.com/](http://usainbolt.com/)
+- [https://sweden.se/](https://sweden.se/)
+- [http://www.tinkeringmonkey.com/work/](http://www.tinkeringmonkey.com/work/)
+- [https://www.hawaii.edu/](https://www.hawaii.edu/)
+- [http://snoopdogg.com/](http://snoopdogg.com/)
+- [https://sylvesterstallone.com/](https://sylvesterstallone.com/)
+- [https://news.microsoft.com/](https://news.microsoft.com/)
+- [https://thewaltdisneycompany.com](https://thewaltdisneycompany.com)
+- [https://www.mercedes-benz.com/en/](https://www.mercedes-benz.com/en/)
+- [http://newyork.cbslocal.com/](http://newyork.cbslocal.com/)
+- [http://time.com/](http://time.com/)
+- 
+
+
+
 ### Un mot sur le sécurité
 
 Le risque du multisite est qu'une faille au niveau d'un plugin ou d'une installation, impacterait la sécurité de tous les sites hébergés sous la même instance Wordpress.
@@ -62,6 +88,48 @@ Pour plus d'infos voir: [https://codex.wordpress.org/Hardening_WordPress](https:
  
 Lorsqu'on fait un thème avancé, il est possible également de rajouter de nombreuses fonctionalités, il est toujours recommandés de garder à l'esprit la finalité d'avoir un thème facile à utiliser par une autre personne que vous, si par exemple vous modifier le menu de base de wordpress, il ne faut pas brusquer l'utilisateur finale en lui mettant en place un cockpit d'avion qui pour l'utilisateur ee sera pas aussi cohérent et simple que vous en tant que développeur ne le voyez.
 
+### Présentation de Bootstrap
+
+[Bootstrap](https://getbootstrap.com/) est un framwork CSS. Si vous navez jamais fait de framework perso alors comprenaez qu'en temps que développer, vous aimeriez ne pas avoir à positionner vous même chaque block de votre site, avoir a réecrire chaque code de couleur, vous tuez à la tache pour faire en sortes qie votre interface correspond au final a ce que vous aviez prévu
+
+Avec bootstrap il est simple de créer des interfaces, et d'y intégrer des élements prédéfinis comme des boutons, des menus, des élèments déroulable, des panels, des images arrondis, des caroussels, des tables stylés, etc...
+
+Utiliser Bootstrap ou n'importe qu'ekke autre framework CSS pour permet de gagner un maximum de temps
+Les autres framework disponible sont:
+- [Foundation](http://foundation.zurb.com/)
+- [PureCSS](https://purecss.io/)
+- [Semantic UI](http://semantic-ui.com/)
+- [UiKit](http://getuikit.com/)
+- [Kube](http://imperavi.com/kube/)
+- [Bulma](https://bulma.io/)
+- ...
+
+Bootstrap est basé sur une grille de 12 cases, vous devez garder cela en têtes
+
+Ainsi il vous est possible d'avoir des disposition de 3 / 6 / 3 pour la sidebar de droite (3), le contenu central (6) et la sidebar de gauche (3), au final vous devriez avoir une somme de 12.
+La taille de chaque zone peut être soit fixe soit dite fluide (en pourcentage de la page)
+
+Avec un peu de connaissances CSS, vous pouvez modifier les styles bootstrap pour par exemple!
+- Enlever les arrondis
+- Eliminier les ombers
+- Changer les couleurs par défauts
+- Modifier l'orientation des styles pour qu'il soit RTL (Right to left)
+
+Nous y reviendrons dans ce workshop
+
+#### Communauté Bootstrap
+
+L'avantages à utiliser bootstrap et la réutilisation, sur internet une forte communauté mettent en ligne des tutoriels ou des templates bootstrap gratuitement, Bootstrap nous permet de communiquer sur la même longueur d'ondes, mais également d'avoir un framework qui est maintenu, mis à jour et amélioré, vous pouvez si vous le désirez participer soit en ajoutant ou corrigeant des fonctionalités ou plus simplement en créant des "issues" qui se résume à proposer des améliorations ou relever des bugs.
+
+#### Autres techniques CSS
+
+Depuis quelques temps il est plus simple de créer une interface via deux nouvelles spécifications CSS à savoir:
+
+- flexbox qui positionne les élements en unidirectionnel
+- CSS-Grid qui positionne les élèments en deux dimensions
+
+Il est conseillé avant d'utiliser une nouvelle spécification CSS de vérifier si celle ci est supportée par la majorité des navigateurs via le site [https://caniuse.com/](https://caniuse.com/). Pour ce qui est de javascript, il y a toujours des transpileurs qui permettent de résoudre ce blocage via une traduction du code vers une version plus ancienne (généralement ES5), mais pour CSS il n'y a pas de polyfills CSS ou projet allant dans ce sens, soutenu par une forte communauté.
+
 ## Préparation du workshop
 
 ### Serveur web
@@ -105,4 +173,20 @@ Vous aurez besoin d'avoir sur votre installation des données de travail (fake o
 En cliquant sur Run importer vous avez juste a sélectionner le fichier xml téléchargé et cliquer sur le bouton "import file and import". Puisque le fichier comportera des articles, il vous sera demander si vous voulez automatiquement créer les noms des auteurs trouvés dans le fichier XML ou d'utiliser un des utiliateurs existant dans votre installation. Puis vous pouvez également importer les attachements (lien vers un fichier externe) et au final valider en cliquant sur "submit"
 
 
+## Version statique du template
 
+Pour notre workshop nous allons tout d'abord faire une version statique de votre thème, celui ci sera constituée uniquement de code HTML, JS et CSS
+
+### Utilisation de bootstrap
+
+Il y a deux façons d'utiliser bootstrap:
+
+- En local, vous télécharger les fichiers sur le serveur et vous les utilisez
+- A distance, vous ne télécharger rien et utiliser simplement ce qu'on appelle un CDN (Content Delivery Network)
+
+Techniquement est via à vis du visiteur, les deux sont identiques, l'internaute téléchargera de chez vous ou d'un CDN c'est en principe pareil mais notez les points suivants:
+
+1. En utilisant un CDN vous décharger votre serveur des accès inutile
+2. En utilisant un CDN, cela pourrait être plus rapide pour l'internaute puisque vis à vis du visiteur, les sources CDN sont probablement utilisés par d'autres sites et existe potentiellement sur la machine du visiteur qui n'aura pas à le télécharger mais à utiliser la version qu'il a en cache
+
+> Remarque: Si vous herbergé vou même vos fichiers, vous pouvez en production activer le caching de vos assets (fichiers JS, CSS, Police d'écriture et images) via par exemple [mod_expires](https://httpd.apache.org/docs/current/fr/mod/mod_expires.html) pour les serveurs apache ou [ngx_http_headers_module](http://nginx.org/en/docs/http/ngx_http_headers_module.html) pour les serveurs nginx
