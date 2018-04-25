@@ -38,7 +38,6 @@ Wordpress est le CMS le plus utilisé dans le monde, voici des exemples de sites
 - [https://www.mercedes-benz.com/en/](https://www.mercedes-benz.com/en/)
 - [http://newyork.cbslocal.com/](http://newyork.cbslocal.com/)
 - [http://time.com/](http://time.com/)
-- 
 
 
 
@@ -280,4 +279,73 @@ Nous obtenons ainsi le code suivant
 ```
 
 En terme de fonctionalité il est très simple, essayons de réfléchir sur le contenu
+
+### Du croquis à la maquette
+
+Il existe plusieurs fonctionalités au schéma, celui ci doit avant tout être précéder par une étude des besoins, histoire de savoir ce que doit comporter le site web.
+
+Les étapes sont les suivantes, plus on avance, plus le résultat est fidèle à la représentation final:
+
+- Le Zoning / Sketch
+- Le Wireframe
+- Le Mockup
+- Le Prototype
+
+#### Zoning / Sketch
+
+Si on schématise notre site par de vulguaire bloc on parle de `zoning` qui comme son nom l'indique permet de délimiter chaque zone de votre site, on est ici assez proche du croquis fait à la main.
+
+#### Wireframe
+
+En remplissant chaque block par des images, du texte (le fameux "[lorem ipsum](https://fr.lipsum.com/)") , des petits blocks représentant par exemple l'input de recherche ou d'inscription à la newsletter, on est dans du `wireframe`, nous sommes ici encore au stade d'une schéma fixe et static. Par exemple pour le logo du site, il n'y a pas besoin de mettre le vrai logo ici mais juste une représentation du logo
+
+#### Mockup
+
+En rajoutant de l'intéractivité, la page obtenu est appelé `mockup`, ce n'est plus un croquis mais du HTML. C'est ici que nous rajoutons les couleurs, les paddings (espacement interne) et margins (espacement externe) et du vrai contenu (de vrai images et de vrai logos)
+
+#### Prototype
+
+Le `Protorype` vient à la fin et permet de créer une première version fonctionnel du site, le moteur de recherche fonctionne, l'envoi de mail aussi, si il y a du chargement ajax, c'est pareil.
+
+
+#### Les outils necessaires
+
+Vous aurez souvent besoin d'outils vous permettant d'avoir à disposition du texte, des images ou des éléments graphiques dont la réutilisation est permise, en voici quelques liens:
+
+Pour le texte :
+
+- [Lorem ipsum](https://fr.lipsum.com/)
+- [BlindTextGenerator](http://www.blindtextgenerator.com/lorem-ipsum) qui offre plusieurs alternatives
+- [RendomText](http://www.randomtext.me/) qui permet d'avoir du texte via une API (par [exemple](www.randomtext.me/download/html/lorem/ul-8/5-15))
+- [Fillerama](http://fillerama.io/)
+
+Pour les images :
+
+- [Pexels](https://www.pexels.com/)
+- [Lorem Picsum](https://picsum.photos/)
+- [Lorem Pixel](http://lorempixel.com/)
+- [Place Holder](https://placeholder.com/)
+
+Pour les éléments graphiques
+
+- [Froala Design blocks](https://www.froala.com/design-blocks)
+- [Landing free UI Kit](https://gumroad.com/l/rwEsj)
+- [Design Revision](https://designrevision.com/downloads/shards/)
+- [BootFlat](https://bootflat.github.io/)
+- [UI8.net](https://ui8.net/product/drunken-parrot-ui-kit-free)
+- [Flat UI](https://designmodo.com/flat-free/)
+- [WrapKit Lite](https://wrappixel.com/templates/wrapkit-lite/)
+
+
+#### Les styles de design de templates
+
+Il y a 3 grands styles bien connus
+
+- Skeuomorphisme : Qui essait de représenter le monde réel (donc les arrondis, les ombres, les degradés)
+- Le design Flat : Plus sobre, le flat design se limite à une palette claire des couleurs (contrairement au skeuomorphisme qui n'as aucune limite) et supprime les ombres et les dégradés (on passe à la couleur uni par élément). C'est un style qui est dit minimaliste et applati.
+- Le Material design : par rapport au flat jugé peu interactif, le material design rajoute des sensations à l'interface, ainsi on sait qui est sélectionné, en survole ou cliqué. La tendance material design a pris en compte l'expérience utilisateur, il existe même un [Guide](https://material.io/guidelines/#introduction-principles) d'application
+
+Remarque: Si vous connaissez la barre des menus de windows 7 et windows 8 alors celle de 7, ressemble à la tendance skeuomorphisme et celle de windows 8 à la tendance flat
+
+## WIP
 
